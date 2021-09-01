@@ -32,7 +32,7 @@ http://120.79.93.31/demo/websiteBg/js-particles/demo/index.html
 Packages install
 
 ```bash
-npm install particles.js
+npm install js-particles
 ```
 
 新建vue文件，template中新建canvas标签，mounted中引入particles.js
