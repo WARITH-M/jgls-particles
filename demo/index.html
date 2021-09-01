@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+		<title>canvas响应式炫酷背景渐变互动星空粒子特效动画</title>
+		<style type="text/css">
+			html,
+			body {
+				margin: 0;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+				/* cursor: none; */
+				background: black;
+				background: linear-gradient(to bottom, #000000 0%, #5788fe 100%);
+			}
+
+			.filter {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: #fe5757;
+				animation: colorChange 30s ease-in-out infinite;
+				animation-fill-mode: both;
+				mix-blend-mode: overlay;
+			}
+
+			@keyframes colorChange {
+
+				0%,
+				100% {
+					opacity: 0;
+				}
+
+				50% {
+					opacity: .9;
+				}
+			}
+
+			.landscape {
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				/*background-image:url(../images/trees-landscape-silhouette.png);
+				*/
+				background-image: url('./img/xkbg.png');
+				background-size: 1000px 250px;
+				background-repeat: repeat-x;
+				background-position: center bottom;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="landscape"></div>
+		<div class="filter"></div>
+		<canvas id="canvas"></canvas>
+		<script type="text/javascript" src="../particles.js"></script>
+	</body>
+</html>
